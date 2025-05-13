@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <p id="paramValue"></p>
+  <a href="" id="paramValue"></a>
 
     <script>
         // 获取URL参数
@@ -17,6 +17,7 @@
         // 获取参数t的值并显示
         const tValue = getQueryParam('t');
         document.getElementById('paramValue').textContent = tValue || '???';
+        document.getElementById('paramValue').href = tValue
     </script>
 </body>
 </html>
