@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <p id="paramValue"></p>
+
+    <script>
+        // 获取URL参数
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // 获取参数t的值并显示
+        const tValue = getQueryParam('t');
+        document.getElementById('paramValue').textContent = tValue || '???';
+    </script>
+</body>
+</html>
